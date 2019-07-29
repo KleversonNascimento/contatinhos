@@ -4,17 +4,17 @@
  * and open the template in the editor.
  */
 package contatinhos;
-
+import bot.Crawler;
 /**
  *
  * @author kleverson
  */
 public class Contatinhos {
-
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        Crawler.getTeachersInfos();
         System.out.println("Show");
     }
     
