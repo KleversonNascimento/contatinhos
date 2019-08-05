@@ -13,6 +13,10 @@ public class Professor extends Pessoa {
     	this.telefone = telefone;
     }
 
+    public Professor(String nome){
+	this.nome = "Prof. " + nome;
+    }
+
     @Override
     public void setNome(String nome){
     	this.nome = "Prof. " + nome;
@@ -43,4 +47,5 @@ public class Professor extends Pessoa {
     public String getTelefoneProfessor(){
 	return this.telefone;
     }
+    
 }

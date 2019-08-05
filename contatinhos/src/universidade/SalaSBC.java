@@ -1,7 +1,9 @@
 package universidade;
 
+import java.util.ArrayList;
+
 public class SalaSBC implements Sala{
-    private Turma[] turma;
+    private ArrayList<Turma> turmas;
     private String sala;
     
     public SalaSBC(){}
@@ -23,11 +25,12 @@ public class SalaSBC implements Sala{
         return sala;
     }
 
-    public void setTurma(Turma[] turma) {
-        this.turma = turma;
+    public void addTurma(Turma turma) {
+        this.turmas.add(turma);
     }
 
-    public Turma[] getTurma() {
-        return this.turma;
+    @Override
+    public String getType() {
+        return "Classroom";
     }
 }

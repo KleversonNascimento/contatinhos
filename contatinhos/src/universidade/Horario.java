@@ -1,15 +1,17 @@
 package universidade;
 
 public class Horario {
-    private String dia;
-    private int horaInicio, horaFim, quinzenal;
+    private String dia, quinzenal;
+    private int horaInicio, horaFim;
+    private Sala sala;
 
     public Horario(){}
-    public Horario(String dia, int horaInicio, int horaFim, int quinzenal){
+    public Horario(String dia, int horaInicio, int horaFim, String quinzenal, Sala sala){
     	this.dia = dia;
     	this.horaInicio = horaInicio;
     	this.horaFim = horaFim;
     	this.quinzenal = quinzenal;
+        this.sala = sala;
     }
 
     public void setDia(String dia){
@@ -21,9 +23,6 @@ public class Horario {
     public void setHoraFim(int horaFim){
     	this.horaFim = horaFim;	
     }
-    public void setQuinzenal(int quinzenal){
-    	this.quinzenal = quinzenal;	
-    }
 
     public String getDia(){
     	return this.dia;
@@ -34,7 +33,7 @@ public class Horario {
     public int getHoraFim(){
     	return this.horaFim;
     }
-    public int getQuinzenal(){
+    public String getQuinzenal(){
 	return this.quinzenal;
     }
 }

@@ -1,9 +1,12 @@
 package universidade;
 
+import java.util.ArrayList;
+
 public abstract class Pessoa{
     protected String nome;
     protected String email;
-    private Turma[] turma;
+    protected String RA;
+    private ArrayList<Turma> turmas = new ArrayList();
 
     public abstract void setNome(String nome);
 
@@ -19,10 +22,14 @@ public abstract class Pessoa{
     	return this.email;
     }
 
-    public void adicionarTurma(Turma[] turma){
-	this.turma = turma;
+    public void adicionarTurma(Turma turma){
+	this.turmas.add(turma);
     }
-    public Turma[] getTurma(){
-	return turma;
+    public ArrayList<Turma> getTurmas(){
+	return turmas;
+    }
+    
+    public String getRA() {
+        return this.RA;
     }
 }

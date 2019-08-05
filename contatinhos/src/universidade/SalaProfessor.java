@@ -25,4 +25,9 @@ public class SalaProfessor implements Sala {
     public void setSala(String nome) {
         this.nome = nome;
     }
+    
+    @Override
+    public String getType() {
+        return "Teacher room";
+    }
 }

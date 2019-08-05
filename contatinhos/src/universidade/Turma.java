@@ -5,15 +5,13 @@ public class Turma{
 	private String nomeTurma;
 	private Professor prof;
         private Aluno[] alunos;
-        private Sala sala;
-        private Horario hora;
+        private Horario[] hora;
 
         public Turma(){}
-	public Turma(String nomeTurma, Aluno[] alunos, Professor prof, Sala sala, Horario hora){
+	public Turma(String nomeTurma, Aluno[] alunos, Professor prof, Horario[] hora){
 		this.nomeTurma = nomeTurma;
                 this.alunos = alunos;
 		this.prof = prof;
-                this.sala = sala;
                 this.hora = hora;
 	}
 
@@ -23,12 +21,6 @@ public class Turma{
         public void setProfessor(Professor prof){
             this.prof = prof;
         }
-        public void setSala(Sala sala){
-            this.sala = sala;
-        }
-        public void setHora(Horario hora){
-            this.hora = hora;
-        }
         
 	public String getNomeTurma(){
 		return this.nomeTurma;
@@ -36,10 +28,11 @@ public class Turma{
         public Professor getProfessor(){
             return this.prof;
         }
-        public Sala getSala(){
-            return this.sala;
+        public Horario getHora(int i){
+            return this.hora[i];
         }
-        public Horario getHora(){
-            return this.hora;
+        
+        public Aluno[] getAlunos(){
+            return this.alunos;
         }
 }

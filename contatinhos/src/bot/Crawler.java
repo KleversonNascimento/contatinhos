@@ -61,8 +61,10 @@ public class Crawler {
     }
     
     private static void saveInfos(ArrayList<String> teachers, Universidade university) {
+        System.out.println(teachers.size() + " professores encontrados");
         for (int i = 0; i < teachers.size(); i++) {
             try {
+                System.out.println("Preenchendo infos do " + i + "º professor");
                 Document page_teacher = Jsoup.connect(teachers.get(i)).get();
                 final String name_teacher = page_teacher.getElementsByClass(NAME_SELECTOR).get(0).text();
                 final String email_teacher = page_teacher.getElementsByAttributeValueContaining(TITLE, EMAIL).get(0).text();
