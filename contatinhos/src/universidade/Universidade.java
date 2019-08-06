@@ -94,6 +94,10 @@ public class Universidade {
         }
     }
     
+    public void getSizeStudents() {
+        System.out.println("Neste quadrimestre há " + this.students.size() + " matriculas");
+    }
+    
     public void getTurmas() {
         for (int i = 0; i < this.turmas.size(); i++) {
             System.out.println(this.turmas.get(i).getNomeTurma());
@@ -113,9 +117,8 @@ public class Universidade {
     
     public void getRoomByName(String name) {
         for (int i = 0; i < this.teachers.size(); i++) {
-            System.out.println();
             if (this.teachers.get(i).getNome().contains(name)) {
-                System.out.println("Sala do(a) " + this.teachers.get(i).getNome() + " é a " + this.teachers.get(i).getSalaProfessor());
+                System.out.println("Sala do(a) " + this.teachers.get(i).getNome() + " é a " + this.teachers.get(i).getSalaProfessor().getSala());
             }
         }
     }

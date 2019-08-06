@@ -28,6 +28,7 @@ public class Contatinhos {
             System.out.println("Menu principal:");
             System.out.println("1 - Ver matérias de um aluno");
             System.out.println("2 - Sala de um professor");
+            System.out.println("3 - Total de matriculas neste quadrimestre");
             
             int opcao = scanner.nextInt();
             if (opcao == 1) {
@@ -38,6 +39,8 @@ public class Contatinhos {
                 System.out.println("Digite o nome do professor");
                 String nome = scannerText.nextLine();
                 UFABC.getRoomByName(nome);
+            } else if (opcao == 3) {
+                UFABC.getSizeStudents();
             }
         }
     }

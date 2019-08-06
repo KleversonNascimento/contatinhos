@@ -87,7 +87,6 @@ public class Crawler {
                 SalaProfessor room_teacher = new SalaProfessor(room);
                 Professor teacher = new Professor(name_teacher, email_teacher, room_teacher, area, center, telephone);
                 university.addTeacher(teacher);
-                System.out.println(i);
             } catch (Exception ex) {}
         } 
     }
